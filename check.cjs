@@ -112,7 +112,7 @@ for (const file of allFiles) {
 
 const packageInfo = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
 if (Object.keys(packageInfo.dependencies ?? {}).length) errors.push('package.json: this static website should have no third-party runtime dependencies');
-const publicPages = ['index.html', 'services.html', 'work.html', 'government.html', 'about.html', 'contact.html', 'capabilities.html', 'privacy.html'];
+const publicPages = ['index.html', 'services.html', 'industries.html', 'work.html', 'government.html', 'about.html', 'contact.html', 'capabilities.html', 'privacy.html'];
 for (const name of publicPages) if (!pages.has(path.join(root, name))) errors.push(`Missing required public page ${name}`);
 const expectedPageCount = publicPages.length + projects.length + services.length + Object.keys(redirects).length;
 if (htmlFiles.length !== expectedPageCount) errors.push(`Unexpected HTML page count: found ${htmlFiles.length}; expected ${expectedPageCount}`);
@@ -165,6 +165,16 @@ for (const project of projects) {
     for (const value of workstream) if (!page.html.includes(escapeHtml(value))) fail(file, `missing workstream content: ${value.slice(0, 65)}`);
   }
 }
+
+const domains=require('./industry-data.cjs');
+const domainPage=pages.get(path.join(root,'industries.html'));
+const covered=new Set();
+for(const domain of domains){
+  if(!domainPage?.tags.some(t=>t.attributes.id===domain.id)) errors.push('Missing industry section '+domain.id);
+  for(const id of domain.projects){covered.add(id);if(!projects.some(p=>p.id===id)) errors.push('Unknown industry evidence '+id);}
+  for(const id of domain.services)if(!services.some(s=>s.id===id)) errors.push('Unknown industry service '+id);
+}
+for(const p of projects)if(!covered.has(p.id))errors.push('Portfolio missing from industry mapping: '+p.id);
 
 if (errors.length) {
   console.error(`Website checks failed (${errors.length}):\n${errors.join('\n')}`);

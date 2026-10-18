@@ -2,7 +2,7 @@
 
 Company website for Tola LLC, with 20 company portfolios and 74 areas of contribution. BJ’s and Nestlé each have one company page with distinct engagement sections. Older project links redirect to the matching section.
 
-The site includes 12 service pages and 43 HTML pages in total. Tola is presented as one business and healthcare solutions company. Healthcare solutions appears second within the shared service offering; there is no separate pharmacy navigation item. The underlying healthcare scope remains medication management, patient support and facility services.
+The site includes 12 service pages and 44 HTML pages in total. Tola is presented as one business and healthcare solutions company. Healthcare solutions appears second within the shared service offering; there is no separate pharmacy navigation item. The underlying healthcare scope remains medication management, patient support and facility services.
 
 ## Website
 
@@ -19,6 +19,7 @@ Requires Node.js 24. No external packages are needed.
 Run node build.cjs, then node check.cjs. Open dist/index.html or run node preview.cjs and visit http://127.0.0.1:5473.
 
 - content.cjs: reviewed company and engagement summaries.
+- industry-data.cjs: eight industry domains, supported capabilities and portfolio references.
 - capability-data.cjs: service scopes, deliverables and related experience.
 - build.cjs, page-templates.cjs and company-page.cjs: page generation.
 - styles.css and app.js: styling and interactions.
