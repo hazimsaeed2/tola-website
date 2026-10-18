@@ -3,7 +3,8 @@ const path = require('node:path');
 const {projects, services, redirects} = require('./content.cjs');
 const companyPage = require('./company-page.cjs');
 const dist = path.join(__dirname, 'dist');
-const siteUrl = (process.env.SITE_URL || 'https://hazimsaeed2.github.io/tola-website').replace(/\/+$/, '');
+// Pages may report HTTP when HTTPS enforcement is off; use secure public metadata.
+const siteUrl = (process.env.SITE_URL || 'https://tolaunited.com').replace(/^http:\/\//i, 'https://').replace(/\/+$/, '');
 if (!/^https:\/\/[^\s<>"']+$/.test(siteUrl)) throw new Error('SITE_URL must be an HTTPS website URL');
 fs.mkdirSync(path.join(dist, 'projects'), {recursive:true});
 fs.mkdirSync(path.join(dist, 'services'), {recursive:true});

@@ -8,6 +8,8 @@ The site includes 12 service pages and 43 HTML pages in total. Technology, clini
 
 GitHub Pages address: https://hazimsaeed2.github.io/tola-website/
 
+Configured public domain: https://tolaunited.com/
+
 The deployment workflow builds and checks the site on pushes to main, then publishes only the generated dist folder. A deployment is live when the Deploy Tola website workflow succeeds.
 
 ## Local development
@@ -24,7 +26,7 @@ Run node build.cjs, then node check.cjs. Open dist/index.html or run node previe
 - check.cjs: page, link, content and publication checks.
 - .github/workflows/pages.yml: build and deployment.
 
-SITE_URL controls canonical links, sitemap and social-image URLs. GitHub Actions takes it from Pages configuration. It defaults to the GitHub Pages address above. No custom domain is configured.
+SITE_URL controls canonical links, sitemap and social-image URLs. GitHub Actions takes it from Pages configuration and normalizes HTTP to HTTPS. It defaults to the configured public domain above.
 
 ## Source records
 
