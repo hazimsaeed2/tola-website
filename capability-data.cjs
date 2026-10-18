@@ -52,12 +52,12 @@ module.exports = [
   },
   {
     "id": "clinical",
-    "title": "Clinical pharmacy services",
-    "short": "Clinical pharmacy",
+    "title": "Healthcare solutions",
+    "short": "Healthcare solutions",
     "number": "02",
     "practice": "clinical",
-    "summary": "Pharmacist-led medication reviews, patient education and facility support, with coordinated follow-up.",
-    "text": "Support patients, providers and facilities with medication reviews, clinical consultation and coordinated follow-through.",
+    "summary": "Medication management, patient support and facility services delivered by qualified pharmacy professionals.",
+    "text": "Support care delivery with medication management, patient education, clinical consultation and facility services. Our healthcare work focuses on pharmacy expertise and coordination with the treating team.",
     "items": [
       "Long-term care medication-regimen reviews and written recommendations",
       "Remote medication therapy management and adherence support",
@@ -98,7 +98,7 @@ module.exports = [
       }
     ],
     "prompts": [
-      "What facility, patient population or clinical pharmacy service needs support?",
+      "Which medication-management, patient-support or facility service needs support?",
       "What location, review schedule, coverage and credentialing requirements apply?"
     ]
   },

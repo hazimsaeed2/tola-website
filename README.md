@@ -2,7 +2,7 @@
 
 Company website for Tola LLC, with 20 company portfolios and 74 areas of contribution. BJ’s and Nestlé each have one company page with distinct engagement sections. Older project links redirect to the matching section.
 
-The site includes 12 service pages and 43 HTML pages in total. Technology, clinical pharmacy and operations are the three primary practices, with pharmacy featured second and linked from the main navigation.
+The site includes 12 service pages and 43 HTML pages in total. Tola is presented as one business and healthcare solutions company. Healthcare solutions appears second within the shared service offering; there is no separate pharmacy navigation item. The underlying healthcare scope remains medication management, patient support and facility services.
 
 ## Website
 

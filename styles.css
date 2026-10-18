@@ -334,3 +334,13 @@
 @media(max-width:620px){.tola-intro{padding-block:32px;gap:22px}.tola-intro h1{font-size:clamp(40px,10.8vw,58px);letter-spacing:-1.8px;margin-top:20px}.tola-intro .eyebrow{font-size:9px;letter-spacing:1px}.intro-description .lead{font-size:20px}.intro-description .actions{flex-wrap:wrap}.practice-trio,.priority-services,.engagement-options{grid-template-columns:1fr;gap:18px}.practice-tile{padding:28px}.practice-tile h2{font-size:35px;margin-top:25px}.practice-tile ul{font-size:14px;margin-block:20px}.practice-top .eyebrow{font-size:11px}.practice-symbol{display:block}.outcome-list>a{grid-template-columns:22px 1fr 24px;gap:14px;padding-block:24px}.outcome-list h3{font-size:23px}.outcome-list p{font-size:14px}.teaming-strip{display:block}.teaming-strip p{margin-bottom:18px}.practice-jumps{gap:15px}.practice-jumps a{font-size:12px}.service-group{padding-top:45px}.service-practice-feature{grid-template-columns:1fr;gap:20px;padding-top:35px;margin-top:35px}.service-practice-feature h2{font-size:31px}.priority-services .capability-card{padding:28px}}
 
 .capability-card .row-index{display:none}
+
+/* A shared service family for business and healthcare requirements. */
+.unified-offering{padding-block:20px 80px}.unified-offering .section-heading{margin-bottom:30px}.unified-offering .section-heading h2{font-size:38px}
+.unified-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.unified-card{padding:32px;display:flex;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--wash);min-width:0}
+.unified-card .eyebrow{font-size:10px}.unified-card h3{font-size:29px;line-height:1.2;margin:24px 0 17px}.unified-card p{font-size:15px;line-height:1.75;margin-bottom:24px}.unified-card .text-link{margin-top:auto;align-self:flex-start}
+.unified-directory .capability-card{border-top-color:var(--ink);background:#fff;color:var(--ink)}.unified-directory .capability-card:hover{border-top-color:var(--red)}
+.legacy-service-anchors{height:0}.tola-intro{align-items:center}
+@media(max-width:850px){.unified-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.unified-card{padding:25px}}
+@media(max-width:620px){.unified-offering{padding-block:15px 50px}.unified-offering .section-heading h2{font-size:32px}.unified-grid{grid-template-columns:1fr}.unified-card{padding:28px}.unified-card h3{font-size:28px}}
