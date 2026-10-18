@@ -1,0 +1,9 @@
+knowledge-base/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+dist/
+review/
+.env
+.env.*
