@@ -287,7 +287,7 @@ module.exports = [
         "project": "bjs",
         "anchor": "bjs-ai",
         "label": "BJ’s Wholesale Club — AI delivery",
-        "context": "Tola experience in AI architecture, conversational analytics and departmental automation with client engineering teams."
+        "context": "Individual/team experience, later continued through Tola, in AI architecture, conversational analytics and departmental automation with client engineering teams."
       },
       {
         "project": "creditninja",
@@ -340,7 +340,7 @@ module.exports = [
         "project": "nestle",
         "anchor": "nestle",
         "label": "Nestlé — data science and analytics",
-        "context": "Tola-led analytical design spanning marketing measurement, raw-material inventory policies and demand forecasting."
+        "context": "Individual/team analytical design, later continued through Tola, spanning marketing measurement, raw-material inventory policies and demand forecasting."
       },
       {
         "project": "ceva",
@@ -402,7 +402,7 @@ module.exports = [
         "project": "nestle",
         "anchor": "nestle",
         "label": "Nestlé — data science and analytics",
-        "context": "Tola-led analytical design spanning marketing measurement, raw-material inventory policies and demand forecasting."
+        "context": "Individual/team analytical design, later continued through Tola, spanning marketing measurement, raw-material inventory policies and demand forecasting."
       }
     ],
     "prompts": [
@@ -501,7 +501,7 @@ module.exports = [
       {
         "project": "mckesson",
         "label": "McKesson — supplier and material coordination",
-        "context": "Tola inventory-operations work included coordination with manufacturers and service providers on material delivery and warranty matters."
+        "context": "Individual/team work, later continued through Tola, included coordination with manufacturers and service providers on material delivery and warranty matters."
       }
     ],
     "prompts": [
@@ -594,7 +594,7 @@ module.exports = [
       {
         "project": "mckesson",
         "label": "McKesson — inventory operations",
-        "context": "Tola work coordinating material flow, SAP EWM inventory accuracy, supplier matters and stock consolidation across distribution centers."
+        "context": "Individual/team experience, later continued through Tola, coordinating material flow, SAP EWM inventory accuracy, supplier matters and stock consolidation across distribution centers."
       },
       {
         "project": "nestle",

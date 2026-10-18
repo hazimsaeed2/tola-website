@@ -8,12 +8,12 @@ const projects = [
       "operations",
       "analytics"
     ],
-    "experienceType": "Tola engagement",
+    "experienceType": "Team experience continued through Tola",
     "headline": "Improve material flow and inventory control.",
     "summary": "Inventory operations, supplier coordination, SAP EWM accuracy programs and consolidation across distribution centers.",
-    "role": "Tola’s inventory operations lead coordinated distribution operations, inventory control, planning, procurement and SAP teams. Client owners implemented approved system changes and retained purchasing, quality and inventory-adjustment authority.",
+    "role": "The inventory operations lead coordinated distribution operations, inventory control, planning, procurement and SAP teams, initially in an individual/team capacity and later through Tola LLC. Client owners implemented approved system changes and retained purchasing, quality and inventory-adjustment authority.",
     "scope": "Inventory operations across multiple distribution centers, with the engagement based in Irving, Texas.",
-    "status": "June 2021–ongoing in the October 18, 2026 inventory-operations record.",
+    "status": "June 2021–ongoing in the October 18, 2026 inventory-operations record. Work began as individual/team experience and later continued through Tola LLC. The dates and reported results cover the overall engagement, including the earlier work and later Tola delivery.",
     "tags": [
       "SAP EWM",
       "Inventory control",
@@ -73,7 +73,7 @@ const projects = [
     ],
     "headline": "Connected expertise from materials to decisions.",
     "summary": "Materials planning, XTEL–SAP trade promotion integration, and data science across three distinct engagements.",
-    "role": "Experience includes materials-planning team leadership, partner-supported integration delivery and Tola-led analytics. Delivery roles, client responsibilities and results are described within each engagement.",
+    "role": "Experience includes materials-planning team leadership, partner-supported integration delivery, and analytics that began as individual/team experience and later continued through Tola LLC. Each engagement identifies its delivery role and client responsibilities.",
     "scope": "Purina materials planning; trade promotion integration across the reported Purina, Waters, Nutrition and Health Science scope; and U.S. pet-food analytics.",
     "status": "Materials planning: November 2018–June 2021. TPM integration: 2019–2023. Analytics: January 2023–December 2025. These are separate engagement periods.",
     "tags": [
@@ -143,7 +143,7 @@ const projects = [
       [
         "Demand forecasting and model delivery",
         "Time-series and gradient-boosting forecasts, with Azure Machine Learning training and batch inference and Azure DevOps release automation.",
-        "Tola designed the forecast hierarchy, initial model and evaluation approach. Client engineers completed feeds, dashboards and platform operations. The record reports 50% less active planning effort and 25% shorter lead time for comparable model changes."
+        "The lead consultant designed the forecast hierarchy, initial model and evaluation approach. Client engineers completed feeds, dashboards and platform operations. The record reports 50% less active planning effort and 25% shorter lead time for comparable model changes."
       ]
     ],
     "metrics": [],
@@ -222,7 +222,7 @@ const projects = [
         "experienceType": "Partner experience",
         "headline": "Connect trade promotion plans to enterprise systems.",
         "summary": "XTEL–SAP integration, Azure data pipelines and technical leadership across trade promotion management workflows.",
-        "role": "One Tola consultant developed critical integration patterns and led architecture and delivery coordination, working with NTT DATA, client engineers, SAP specialists and XTEL teams. Client owners retained business approvals, platform access and ongoing operations.",
+        "role": "One consultant in the client and partner delivery organization developed critical integration patterns and led architecture and delivery coordination, working with NTT DATA, client engineers, SAP specialists and XTEL teams. Client owners retained business approvals, platform access and ongoing operations.",
         "scope": "Foundation integration for Health Science and Nutrition, followed by leadership across the reported Purina, Waters, Nutrition and Health Science scope. This trade promotion management portfolio is separate from Nestlé analytics and materials planning.",
         "status": "Reported project phases: 2019–2021 and 2021–2023. The NTT DATA Technical Lead role is recorded for 2019–2022; overlapping role ranges do not establish separate full-time assignments or an exact transition date.",
         "tags": [
@@ -274,9 +274,9 @@ const projects = [
         ],
         "headline": "Connect marketing insight to supply planning.",
         "summary": "Marketing measurement, raw-material inventory policies and demand forecasting supported by repeatable model delivery.",
-        "role": "Tola’s principal data science consultant led analytical design, critical components, coaching and technical delivery. Client employees and specialist vendors implemented integrations, operated platforms and made business decisions.",
+        "role": "The principal data science consultant led analytical design, critical components, coaching and technical delivery, initially in an individual/team capacity and later through Tola LLC. Client employees and specialist vendors implemented integrations, operated platforms and made business decisions.",
         "scope": "Nestlé Purina PetCare’s U.S. pet-food operations: six brands, three plants, three distribution centers, 240 ingredient and packaging materials, and finished-goods demand planning.",
-        "status": "Delivery ran January 2023–December 2025, with initial handover complete and outcomes reported through December 2025.",
+        "status": "Delivery ran January 2023–December 2025, with initial handover complete and outcomes reported through December 2025. Work began as individual/team experience and later continued through Tola LLC. The dates and reported results cover the overall engagement, including the earlier work and later Tola delivery.",
         "tags": [
           "Bayesian modeling",
           "Pet-food supply planning",
@@ -303,7 +303,7 @@ const projects = [
           [
             "Demand forecasting and model delivery",
             "Time-series and gradient-boosting forecasts, with Azure Machine Learning training and batch inference and Azure DevOps release automation.",
-            "Tola designed the forecast hierarchy, initial model and evaluation approach. Client engineers completed feeds, dashboards and platform operations. The record reports 50% less active planning effort and 25% shorter lead time for comparable model changes."
+            "The lead consultant designed the forecast hierarchy, initial model and evaluation approach. Client engineers completed feeds, dashboards and platform operations. The record reports 50% less active planning effort and 25% shorter lead time for comparable model changes."
           ]
         ],
         "metrics": [
@@ -323,7 +323,7 @@ const projects = [
             "Eligible production material-request lines supplied in full by the required time during 2025; not a per-material guarantee."
           ]
         ],
-        "experienceType": "Tola engagement",
+        "experienceType": "Team experience continued through Tola",
         "label": "Data science and analytics"
       }
     ]
@@ -438,7 +438,7 @@ const projects = [
     ],
     "headline": "Decision science and AI across retail operations.",
     "summary": "Forecasting, membership analytics, executive AI and workflow automation across two distinct engagements.",
-    "role": "Experience spans team-led retail analytics and a direct Tola AI-delivery engagement. Each engagement below identifies its own responsibilities and client delivery support.",
+    "role": "Experience spans team-led retail analytics and AI delivery that began as individual/team experience and later continued through Tola LLC. Each engagement identifies its responsibilities and client delivery support.",
     "scope": "Retail inventory, marketing and membership analytics; AI governance, executive reporting, inventory prediction and departmental agents.",
     "status": "Retail analytics began in September 2022 and remained ongoing in the October 2026 record. Initial AI delivery concluded in September 2026, followed by limited support.",
     "tags": [
@@ -569,9 +569,9 @@ const projects = [
         ],
         "headline": "AI architecture that supports operating decisions.",
         "summary": "AI governance, executive analytics, inventory optimization and departmental automation delivered with the client’s engineering teams.",
-        "role": "Tola provided Harith Saeed Abdelrahman as its sole consultant for architecture, critical technical development, team development and delivery leadership. BJ’s supplied the delivery organization and retained operational authority.",
+        "role": "Harith Saeed Abdelrahman led architecture, critical technical development, team development and delivery leadership, initially in an individual/team capacity and later as Tola LLC’s sole consultant on the engagement. BJ’s supplied the delivery organization and retained operational authority.",
         "scope": "Distribution analytics across five distribution centers, executive reporting and seven participating business functions. This AI-delivery portfolio is presented separately from the retail decision-science engagement.",
-        "status": "Initial delivery completed in September 2026; limited escalation and enhancement support continued under a separate authorization.",
+        "status": "The overall engagement began in June 2021. Initial delivery completed in September 2026; limited escalation and enhancement support continued under a separate authorization. Work began as individual/team experience and later continued through Tola LLC. The dates and reported results cover the overall engagement, including the earlier work and later Tola delivery.",
         "tags": [
           "AI governance",
           "Conversational analytics",
@@ -623,7 +623,7 @@ const projects = [
             "Seven departments; initial acceptance completed by September 2026."
           ]
         ],
-        "experienceType": "Tola engagement",
+        "experienceType": "Team experience continued through Tola",
         "label": "AI transformation and delivery"
       }
     ]

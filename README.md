@@ -34,3 +34,7 @@ SITE_URL controls canonical links, sitemap and social-image URLs. GitHub Actions
 Private knowledge-base documents, financial records, review reports and credentials are excluded from this repository and deployment. They remain in the owner's local project folder. Public summaries retain their stated delivery attribution and owner-reported results.
 
 Contact links use the supplied Tola emails and phone numbers. There is no contact-form backend or advertising analytics service.
+
+## Company history and attribution
+
+TOLA L.L.C. was formed in Texas on July 5, 2023. McKesson inventory operations, Nestlé analytics and BJ’s AI delivery began as individual/team experience and later continued through Tola. No exact transition date is asserted. Their overall engagement dates and results are preserved without treating the whole period as LLC contract performance. Nestlé TPM retains partner-experience attribution. Formation and private tax, ownership and banking documents are not included in the repository.
