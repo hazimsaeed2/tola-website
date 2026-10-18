@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const {projects,redirects} = require('./content.cjs');
+const {projects,services,redirects} = require('./content.cjs');
 const root = path.join(__dirname, 'dist');
 const errors = [];
 const relative = file => path.relative(root, file).split(path.sep).join('/');
@@ -114,7 +114,34 @@ const packageInfo = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.jso
 if (Object.keys(packageInfo.dependencies ?? {}).length) errors.push('package.json: this static website should have no third-party runtime dependencies');
 const publicPages = ['index.html', 'services.html', 'work.html', 'government.html', 'about.html', 'contact.html', 'capabilities.html', 'privacy.html'];
 for (const name of publicPages) if (!pages.has(path.join(root, name))) errors.push(`Missing required public page ${name}`);
-if (htmlFiles.length !== publicPages.length + projects.length + Object.keys(redirects).length) errors.push(`Unexpected HTML page count: found ${htmlFiles.length}; expected ${publicPages.length + projects.length}`);
+const expectedPageCount = publicPages.length + projects.length + services.length + Object.keys(redirects).length;
+if (htmlFiles.length !== expectedPageCount) errors.push(`Unexpected HTML page count: found ${htmlFiles.length}; expected ${expectedPageCount}`);
+if (new Set(services.map(service => service.id)).size !== services.length) errors.push('Duplicate service identifiers');
+const serviceIndexFile = path.join(root, 'services.html');
+const serviceIndex = pages.get(serviceIndexFile);
+for (const service of services) {
+  const file = path.join(root, 'services', service.id + '.html');
+  const page = pages.get(file);
+  if (!serviceIndex?.tags.some(tag => tag.attributes.id === service.id)) fail(serviceIndexFile, `missing legacy service anchor #${service.id}`);
+  if (!serviceIndex?.tags.some(tag => tag.name === 'a' && tag.attributes.href === `services/${service.id}.html`)) fail(serviceIndexFile, `missing link to service ${service.id}`);
+  if (!page) { fail(file, 'missing service page'); continue; }
+  const links = page.tags.filter(tag => tag.name === 'a').map(tag => tag.attributes.href);
+  if (!page.html.includes(escapeHtml(service.title))) fail(file, 'missing service title');
+  if (!Array.isArray(service.items) || !service.items.length) fail(file, 'service has no defined items');
+  for (const item of service.items || []) {
+    if (typeof item !== 'string' || !item.trim()) fail(file, 'empty service item');
+    else if (!page.html.includes(escapeHtml(item))) fail(file, `missing service item: ${item}`);
+  }
+  if (!links.includes(`../contact.html?service=${service.id}`)) fail(file, 'missing contact link carrying the selected service');
+  for (const id of service.cases || []) if (!projects.some(project => project.id === id)) fail(file, `unknown related project ${id}`);
+  for (const evidence of service.evidence || []) {
+    const project = projects.find(project => project.id === evidence.project);
+    if (!project) { fail(file, `unknown evidence project ${evidence.project}`); continue; }
+    if (evidence.anchor && !(project.engagements || []).some(engagement => engagement.id === evidence.anchor)) fail(file, `unknown engagement ${evidence.anchor} for project ${project.id}`);
+    const href = `../projects/${project.id}.html${evidence.anchor ? '#' + evidence.anchor : ''}`;
+    if (!links.includes(href)) fail(file, `missing evidence link ${href}`);
+  }
+}
 if (new Set(projects.map(project => project.id)).size !== projects.length) errors.push('Duplicate project identifiers');
 if(new Set(projects.map(p=>p.client.toLowerCase())).size!==projects.length) errors.push('Duplicate company cards');
 const workstreamCount = projects.reduce((count, project) => count + project.work.length, 0);
@@ -126,10 +153,12 @@ for (const project of projects) {
   if (!workIndex?.tags.some(tag => tag.name === 'a' && tag.attributes.href === `projects/${project.id}.html`)) fail(file, 'project is absent from the experience index');
   if (page.tags.filter(tag => tag.name === 'details').length !== project.work.length) fail(file, 'workstream disclosure count differs from the source');
   for (const field of ['client', 'role', 'scope', 'status']) if (!page.html.includes(escapeHtml(project[field]))) fail(file, `missing source ${field}`);
+  for (const metric of project.metrics || []) for (const value of metric) if (!page.html.includes(escapeHtml(value))) fail(file, 'missing source metric');
   for(const e of project.engagements||[]) {
     for(const key of ['role','scope','status','experienceType']) if(!page.html.includes(escapeHtml(e[key]))) fail(file,'missing engagement '+key+': '+e.id);
     for(const metric of e.metrics||[]) for(const value of metric) if(!page.html.includes(escapeHtml(value))) fail(file,'missing engagement metric: '+e.id);
     if(!page.tags.some(t=>t.attributes.id===e.id)) fail(file,'missing engagement anchor '+e.id);
+    for (const workstream of e.work || []) for (const value of workstream) if (!page.html.includes(escapeHtml(value))) fail(file, `missing engagement workstream content: ${e.id}`);
   }
   for (const workstream of project.work) {
     if (workstream.length !== 3 || workstream.some(value => typeof value !== 'string' || !value.trim())) { fail(file, 'incomplete workstream source'); continue; }
@@ -141,4 +170,4 @@ if (errors.length) {
   console.error(`Website checks failed (${errors.length}):\n${errors.join('\n')}`);
   process.exit(1);
 }
-console.log(`Checked all ${htmlFiles.length} HTML pages and ${references} local references: required landmarks, titles, descriptions, links, fragments, local dependencies and publication boundaries. Preserved ${projects.length} projects and ${workstreamCount} complete source workstreams.`);
+console.log(`Checked all ${htmlFiles.length} HTML pages and ${references} local references: required landmarks, titles, descriptions, links, fragments, local dependencies and publication boundaries. Verified ${services.length} service pages, legacy anchors, contextual contact links and evidence references. Preserved ${projects.length} projects and ${workstreamCount} complete source workstreams.`);

@@ -2,6 +2,8 @@
 
 Company website for Tola LLC, with 20 company portfolios and 74 areas of contribution. BJ’s and Nestlé each have one company page with distinct engagement sections. Older project links redirect to the matching section.
 
+The site includes 12 service pages and 43 HTML pages in total. Technology, clinical pharmacy and operations are the three primary practices, with pharmacy featured second and linked from the main navigation.
+
 ## Website
 
 GitHub Pages address: https://hazimsaeed2.github.io/tola-website/
@@ -15,7 +17,8 @@ Requires Node.js 24. No external packages are needed.
 Run node build.cjs, then node check.cjs. Open dist/index.html or run node preview.cjs and visit http://127.0.0.1:5473.
 
 - content.cjs: reviewed company and engagement summaries.
-- build.cjs and company-page.cjs: page generation.
+- capability-data.cjs: service scopes, deliverables and related experience.
+- build.cjs, page-templates.cjs and company-page.cjs: page generation.
 - styles.css and app.js: styling and interactions.
 - brand/: approved Tola logo.
 - check.cjs: page, link, content and publication checks.
